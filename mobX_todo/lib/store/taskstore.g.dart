@@ -38,11 +38,11 @@ mixin _$TaskStore on _TaskStore, Store {
   }
 
   @override
-  void delete(String id) {
+  void delete(String i) {
     final _$actionInfo =
         _$_TaskStoreActionController.startAction(name: '_TaskStore.delete');
     try {
-      return super.delete(id);
+      return super.delete(i);
     } finally {
       _$_TaskStoreActionController.endAction(_$actionInfo);
     }
