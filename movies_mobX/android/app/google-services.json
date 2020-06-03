@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "505229030226",
+    "firebase_url": "https://mobx-movies.firebaseio.com",
+    "project_id": "mobx-movies",
+    "storage_bucket": "mobx-movies.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:505229030226:android:3a94631c5d9ad88d00408b",
+        "android_client_info": {
+          "package_name": "com.example.movies_mobX"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "505229030226-08rlmsku9fi43q85k976dbf66gc69uts.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6y1JSbt8rO1wPzUirpM9tp4HZCxr_wjk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "505229030226-08rlmsku9fi43q85k976dbf66gc69uts.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
