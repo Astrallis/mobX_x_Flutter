@@ -39,21 +39,52 @@ class _ExploreState extends State<Explore> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                      Container(child: Text(tile.title, style: TextStyle(color:Colors.white,fontSize:22,fontWeight: FontWeight.w600),)),
-                      Container(child: Text(tile.language, style: TextStyle(color:Colors.white54,fontSize: 13,fontWeight: FontWeight.w300),))
-                    ],),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                      Container(child: Text(tile.rating, style: TextStyle(color:Colors.white,fontSize:15,fontWeight: FontWeight.w500),)),
-                      Container(child: Text(tile.year, style: TextStyle(color:Colors.white54,fontSize: 13,fontWeight: FontWeight.w300),))
-                    ],)
-                  ],),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                              child: Text(
+                            tile.title,
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 22,
+                                fontWeight: FontWeight.w600),
+                          )),
+                          Container(
+                              child: Text(
+                            tile.language,
+                            style: TextStyle(
+                                color: Colors.white54,
+                                fontSize: 13,
+                                fontWeight: FontWeight.w300),
+                          ))
+                        ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                              child: Text(
+                            tile.rating,
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w500),
+                          )),
+                          Container(
+                              child: Text(
+                            tile.year,
+                            style: TextStyle(
+                                color: Colors.white54,
+                                fontSize: 13,
+                                fontWeight: FontWeight.w300),
+                          ))
+                        ],
+                      )
+                    ],
+                  ),
                 ),
                 height: 80,
                 width: MediaQuery.of(context).size.width * 0.8,
@@ -72,7 +103,7 @@ class _ExploreState extends State<Explore> {
 
   @override
   void initState() {
-    exp.getAll();
+    if (exp.trend.isEmpty) exp.getAll();
     // TODO: implement initState
     super.initState();
   }
@@ -96,7 +127,9 @@ class _ExploreState extends State<Explore> {
                     fontWeight: FontWeight.bold),
               ),
             ),
-            SizedBox(height: 30,),
+            SizedBox(
+              height: 30,
+            ),
             Padding(
               padding: const EdgeInsets.only(left: 5.0),
               child: Text(

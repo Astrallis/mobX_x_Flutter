@@ -36,6 +36,12 @@ class _LandingState extends State<Landing> {
                   selectedIndex = value;
                 });
               },
+              leading: Container(
+                height: 30,
+                width: 30,
+                decoration:
+                    BoxDecoration(shape: BoxShape.circle, color: Colors.white),
+              ),
               labelType: NavigationRailLabelType.selected,
               backgroundColor: Colors.black,
               destinations: [
